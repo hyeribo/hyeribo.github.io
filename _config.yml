@@ -16,13 +16,13 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Hello Hyeri World!"
+title                    : "Awesome Place"
 title_separator          : "-"
-name                     : "Yu Hyeri"
+name                     : "Hyeribo"
 description              : "An amazing website."
-url                      : "https://hr5959.github.io"
+url                      : "https://hyeribo.github.io"
 baseurl                  : ""
-repository               : "hr5959/hr5959.github.io"
+repository               : "hyeribo/hyeribo.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
@@ -106,7 +106,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Yu Hyeri"
+  name             : "Hyeribo"
   avatar           : "/assets/images/myPhoto.jpeg"
   bio              : "Hello."
   location         : "Seoul, Republic of Korea"
@@ -126,7 +126,7 @@ author:
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/hr5959"
+      url: "https://github.com/hyeribo"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/u.hyeri"
