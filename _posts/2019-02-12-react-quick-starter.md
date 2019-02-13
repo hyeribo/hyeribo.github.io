@@ -5,15 +5,16 @@ categories: react
 ---
 
 리액트 프로젝트를 시작할때, 제일 빠르고 간단한 방법은 create-react-app을 사용하는것이다.  
-(참고: [https://facebook.github.io/create-react-app/docs/getting-started](https://facebook.github.io/create-react-app/docs/getting-started))
 
-근데 나는 이거 쓰기 싫다. 의존성 모듈이 너무 많고 웹팩 설정도 직접 해주는데, 코드가 너무 길어서 커스텀 할 엄두가 안난다. 그러니까 처음부터 만들어보겠다.
+그런데 create-react-app 을 사용해서 앱을 만들면 커스텀 하기도 어렵고, 그렇지 않더라도 의존성 모듈이 너무 많아져서 결국 마음에 들지 않는 프로젝트가 생성된다.  
+
+그렇게 때문에 처음부터 하나하나 만들어서 사용해보자.
 
 기본적으로 사용할 기능은 대략 아래와 같다.
 
 - 리액트 v16.8.1~
-- 웹팩 v4
-- 바벨 v7
+- 웹팩 v4~
+- 바벨 v7~
 - react-hot-loader v4.5.4~
 
 <br/>
@@ -24,17 +25,17 @@ $ mkdir react-quick-starter
 $ cd react-quick-starter
 $ npm init -y
 ```
-- -y : default 설정으로 즉시 init
+- -y : default 설정으로 즉시 init한다.
 
 <br/>
 
-## 2. 리액트 모듈 설치
+## 2. 리액트 패키지 설치
 ```
 $ npm install --save react react-dom react-hot-loader
 ```
-- --save : package.json의 dependencies에 해당 모듈을 추가한다.
+- --save : package.json의 dependencies에 해당 패키지를 추가한다.
 - react : 리액트 라이브러리
-- react-dom : 리액트 컴포넌트가 DOM에 접근할 수 있게 해주는 라이브러리. 항상 react 모듈과 동일한 버전을 유지하자.
+- react-dom : 리액트 컴포넌트가 DOM에 접근할 수 있게 해주는 패키지. 항상 react와 동일한 버전을 유지하자.
 - react-hot-loader : hot loader 설치. 프로덕션 모드일때는 자동으로 인식하여 실행되지 않기때문에 --save 옵션을 사용해도 된다.
 
 <br/>
@@ -43,8 +44,8 @@ $ npm install --save react react-dom react-hot-loader
 ```
 $ npm install --save-dev webpack webpack-cli webpack-dev-server
 ```
-- --save-dev : package.json의 devDependencies에 해당 모듈을 추가한다. 프로덕션 배포시 install 되지 않는다.
-- webpack : 여러 코드를 브라우저가 이해할 수 있도록 변환해주고, 번들링해준다. (참고: [웹팩4 설정하기](/development/what-is-webpack/)) 
+- --save-dev : package.json의 devDependencies에 해당 패키지를 추가한다. 프로덕션 배포시 install 되지 않는다.
+- webpack : 여러 코드를 브라우저가 이해할 수 있도록 변환해주고, 번들링해준다.
 - webpack-cli : webpack 명령어를 사용할수 있게 해준다. v4 부터 필수임.
 - webpack-dev-server : 개발단계에서 hot-reloading이 가능한 웹서버를 실행시켜준다.
 
@@ -58,7 +59,7 @@ $ npm install --save-dev css-loader style-loader url-loader file-loader html-web
 
 <br/>
 
-## 4. 바벨 모듈 설치
+## 4. 바벨 패키지 설치
 바벨 v6 이하에서는 바벨 패키지들을 babel-[패키지명] 으로 install했지만, 바벨 v7 부터는 바벨 패키지들이 @babel라는 namespace 안에 속하게 되어 @babel/[패키지명] 으로 install하게 되었다.
 
 ```
@@ -70,7 +71,7 @@ $ npm install --save @babel/polyfill
 ```
 $ npm install --save-dev babel-loader @babel/core @babel/preset-env @babel/preset-react
 ```
-- @babel/preset-env : 브라우저에 필요한 자바스크립트 버전을 알아서 파악해서 polyfill을 넣어준다. (stage-x 플러그인을 지원하지 않으니 참고하자. [링크](https://babeljs.io/blog/2018/07/27/removing-babels-stage-presets))
+- @babel/preset-env : 브라우저에 필요한 자바스크립트 버전을 알아서 파악해서 polyfill을 넣어준다. (앞으로 stage-x 플러그인을 지원하지 않으니 참고하자. [링크](https://babeljs.io/blog/2018/07/27/removing-babels-stage-presets))
 
 <br/>
 
@@ -178,7 +179,7 @@ module.exports = env => ({
 
 <br/>
 
-**.babelrc** - 바벨 설정파일
+**.babelrc** : 바벨 설정파일
 
 ```
 {
@@ -223,7 +224,7 @@ const Home = () => (
 
 export default Home;
 ```
-- 리액트 v16.8.1 부터는 **React Hooks**가 정식 릴리즈되었으므로 class형 컴포넌트를 사용하지 말아보자!
+- 리액트 v16.8.1 부터는 **React Hooks**가 정식 릴리즈되었으므로 class형 컴포넌트를 사용하지 않도록 하자!
 
 
 <br/>
@@ -263,4 +264,4 @@ render(Home);
 
 이것으로 리액트 프로젝트를 시작하기위한 기본 환경구성을 끝냈다.
 
-참고 소스코드: [https://github.com/hr5959/react-quick-starter](https://github.com/hr5959/react-quick-starter)
+소스코드: [https://github.com/hyeribo/react-quick-starter](https://github.com/hyeribo/react-quick-starter)
