@@ -1,7 +1,8 @@
 ---
 title: "[ReactJS] create-react-app 사용하지 않고 리액트 시작하기"
 date: 2019-02-12 20:08:00 +0900
-categories: react
+categories: frontend
+tags: react webpack babel RHL react-quick-starter
 ---
 
 리액트 프로젝트를 시작할때, 제일 빠르고 간단한 방법은 create-react-app을 사용하는것이다.  
@@ -244,7 +245,7 @@ const render = Home => {
 render(Home);
 ```
 - react-hot-loader : 변경사항을 Live-reload 한다.
-- react-hot-loader/root : react-hot-loader v4.5.4 버전부터는 `AppContainer`가 아닌 `react-hot-loader/root`의 `hot`을 사용한다. ([다른 방법으로 react-hot-loader 사용하기](https://www.npmjs.com/package/react-hot-loader#getting-started))
+- react-hot-loader/root : react-hot-loader v4.5.4 버전부터는 `AppContainer`가 아닌 `react-hot-loader/root`의 `hot`을 사용한다.
 
 
 <br/>
