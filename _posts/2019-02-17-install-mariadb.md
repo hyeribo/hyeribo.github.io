@@ -1,5 +1,5 @@
 ---
-title: "[MariaDB] Homebrew로 MariaDB(MySQL) 설치하기"
+title: "[MariaDB] Homebrew로 MariaDB(MySQL) 설치하고 설정하기"
 date: 2019-02-17 18:22:00 +0900
 categories: server
 tags: mariadb mysql
